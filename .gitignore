@@ -1,0 +1,7 @@
+# Project exclude paths
+/jsp/target/
+/request/target/
+/response/target/
+/servlet_context/target/
+/servlet_helloworld/target/
+/sessionAndCookie/target/
