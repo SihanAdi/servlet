@@ -18,7 +18,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
         <servlet-name>servletShow</servlet-name>
         <url-pattern>/servlet/show</url-pattern>
     </servlet-mapping>
-    
+<!--    注册过滤器-->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>filter.CharacterEncodingFilter</filter-class>
@@ -28,4 +28,37 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 <!--        只要是/servlet下的任何请求都会经过这个过滤器-->
         <url-pattern>/servlet/*</url-pattern>
     </filter-mapping>
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>servlet.login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/servlet/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>servlet.logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/servlet/logout</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>sysfilter</filter-name>
+        <filter-class>filter.sysFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sysfilter</filter-name>
+        <!--        只要是/servlet下的任何请求都会经过这个过滤器-->
+        <url-pattern>/sys/*</url-pattern>
+    </filter-mapping>
+
+<!--    注册监听器-->
+    <listener>
+        <listener-class>listener.OnlineCountListener</listener-class>
+    </listener>
 </web-app>

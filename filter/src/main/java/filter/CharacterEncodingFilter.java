@@ -17,6 +17,7 @@ public class CharacterEncodingFilter implements Filter {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
+
         System.out.println("这是CharacterEncodingFilter执行前");
         chain.doFilter(request,response);//让我们的请求继续走，如果不写，程序到这里就会被拦截停止
         System.out.println("这是CharacterEncodingFilter执行后");

@@ -11,6 +11,7 @@
         <module name="response" />
         <module name="jsp" />
         <module name="sessionAndCookie" />
+        <module name="jdbc" />
         <module name="servlet_helloworld" />
         <module name="servlet_context" />
       </profile>
